@@ -3,7 +3,9 @@ Rede Neural identificadora de Pokémons
 
 ## Importando datasets do Kaggle no Google Colab:
 Este mesmo tutorial pode ser encontrado [nesta página do Kaggle](https://www.kaggle.com/general/74235) (em inglês).
+Para pular o tutorial e/ou copiar todas as linhas num bloco só, desça até o fim da página clicando [aqui](#todos-os-comandos).
 
+## Tutorial
 ### 1. Obter um Token
 - Crie uma conta no Kaggle (você pode fazer log in com a conta Google)
 - Acesse a página de configurações de sua conta
@@ -56,3 +58,22 @@ O comando ```unzip``` descompacta arquivos em formato _.zip_. Por exemplo, podem
 
 Para extrair o conteúdo do arquivo _train.zip_ na pasta _train_:
 >```! unzip train.zip -d train```
+
+## Todos os comandos
+```
+# setup
+! pip install -q kaggle
+from google.colab import files
+files.upload()
+! mkdir ~/.kaggle
+! cp kaggle.json ~/.kaggle/
+! chmod 600 ~/.kaggle/kaggle.json
+
+# download data
+! kaggle datasets list
+! kaggle datasets download -d thedagger/pokemon-generation-one
+
+# unzip data
+! mkdir train
+! unzip train.zip -d train
+```
