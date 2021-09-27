@@ -45,3 +45,17 @@ def loli_model():
 	print("load_model done")
 	return poke_model
 
+def predict(image_path, model = "dummy"):
+	if model == "dummy":
+    	model = loli_model()
+    
+    in_folder = in_folder
+    
+    image = tf.keras.preprocessing.image.load_img(image_path, 
+												  target_size = (height, width))
+    
+    image = tf.keras.preprocessing.image.img_to_array(image)
+    image_arr = tf.expand_dims(image, axis = 0)
+    
+    predicts = model(image_arr)
+    return tf.argmax(predicts[0]).numpy()
