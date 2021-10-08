@@ -1,6 +1,6 @@
 # PokIEEEdex
 
-![](examples/capa.png)
+![](examples/capa.jpg)
 
 ![](https://img.shields.io/badge/python-%231C3B56.svg?&style=for-the-badge&logo=python&logoColor=%23FFD343)
 ![](https://img.shields.io/badge/tensorflow-%23425066.svg?&style=for-the-badge&logo=tensorflow&logoColor=%23FF6F00)
