@@ -48,7 +48,7 @@ def loli_model():
 def predict(image_path, model = "dummy"):
 	if model == "dummy":
 		model = loli_model()
-	in_folder = in_folder
+
 	image = tf.keras.preprocessing.image.load_img(image_path, 
 						      target_size = (height, width))
 
@@ -56,4 +56,4 @@ def predict(image_path, model = "dummy"):
 	image_arr = tf.expand_dims(image, axis = 0)
 
 	predicts = model(image_arr)
-    return tf.argmax(predicts[0]).numpy()
+	return tf.argmax(predicts[0]).numpy()
